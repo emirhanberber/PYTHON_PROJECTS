@@ -6,12 +6,15 @@ kırılacak_puan=point/hak
 i=0
 while i<hak:
     guess=int(input("Guess the number:"))
-    
+
     if guess == number:
         print(f"Congratulations, you guessed correctly.\nYour score is:{point}")
         break
     else:
         point-=kırılacak_puan
+        if point<0:
+            point=0
         print(f"Incorrect guess,\nyour score is:{point}")
     i+=1
+
 
